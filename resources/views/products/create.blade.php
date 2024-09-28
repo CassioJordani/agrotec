@@ -1,6 +1,6 @@
 <!-- resources/views/products/create.blade.php -->
 
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 <h1>Criar Produto</h1>
