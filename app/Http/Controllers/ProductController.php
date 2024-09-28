@@ -9,7 +9,7 @@ class ProductController extends Controller
 public function index()
 {
 
-$products = Products::all();
+$products = Product::all();
 return view('products.index', compact('products'));
 }
 
@@ -20,22 +20,22 @@ return view('products.create');
 
 public function store(Request $request)
 {
-$product = Products::create($request->all());
+$product = Product::create($request->all());
 return redirect()->route('products.index');
 }
 
-public function edit(Products $product)
+public function edit(Product $product)
 {
 return view('products.edit', compact('product'));
 }
 
-public function update(Request $request, Products $product)
+public function update(Request $request, Product $product)
 {
 $product->update($request->all());
 return redirect()->route('products.index');
 }
 
-public function destroy(Products $product)
+public function destroy(Product $product)
 {
 $product->delete();
 return redirect()->route('products.index');
