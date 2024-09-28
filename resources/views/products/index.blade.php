@@ -1,6 +1,6 @@
 <!-- resources/views/products/index.blade.php -->
 
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 <h1>Lista de Produtos</h1>
